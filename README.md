@@ -88,7 +88,7 @@ Specifies a order for sorting your contents within the custom section of the mot
 
 ## Limitations
 
-Supported operating systems:
+Tested only on below operating systems:
 * Centos: 6, 7
 
 Supported puppet versions:
