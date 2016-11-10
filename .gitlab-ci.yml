@@ -1,8 +1,0 @@
-job_test:
-  stage: test
-  image: ruby:2.1
-  script:
-    - bundle install
-    - bundle exec rake test
-  tags:
-    - docker
