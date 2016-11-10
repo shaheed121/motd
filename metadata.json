@@ -1,0 +1,21 @@
+{
+  "name": "motd",
+  "version": "0.1.0",
+  "author": "Abdul Shaheed",
+  "summary": "Puppet module to manage Message of the day on linux systems.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/shaheed121/motd",
+  "project_page": "https://github.com/shaheed121/motd",
+  "issues_url": "https://github.com/shaheed121/motd/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 4.13.1"},
+    {"name":"puppetlabs-concat","version_requirement":">= 2.2.0"}
+  ],
+  "data_provider": "hiera",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": ["6", "7"]
+    }
+  ]
+}

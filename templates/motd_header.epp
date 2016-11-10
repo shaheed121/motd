@@ -1,0 +1,15 @@
+-------------------------------------------------
+<%= $facts[hostname] %>
+<%= $facts[operatingsystem] %> <%= $facts[operatingsystemrelease] %> <% if $facts[architecture]  { -%> <%= $facts[architecture] %> <% } %>
+Puppet   : <%= $facts[puppetversion] %>
+Facter   : <%= $facts[facterversion] %>
+FQDN     : <%= $facts[fqdn] %>
+IP       : <%= $facts[ipaddress] %>
+<% if $facts[processor0]  { -%>
+Processor: <%= $facts[processor0] %>
+<% } -%>
+Memory   : <%= $facts[memorysize] %>
+
+-------------------------------------------------
+Custom section starts below:
+-------------------------------------------------
