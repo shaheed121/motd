@@ -14,7 +14,7 @@
 
 ## Description
 
-Configures the Message of the day (motd).
+Configures the Message of the day (motd) using puppet.
 
 ## Setup
 
