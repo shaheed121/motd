@@ -1,10 +1,10 @@
-# motd
+# puppet-motd
 
 #### Table of Contents
 
 1. [Description](#description)
-1. [Setup - The basics of getting started with motd](#setup)
-    * [What motd affects](#what-motd-affects)
+1. [Setup - The basics of getting started with puppet-motd](#setup)
+    * [What puppet-motd affects](#what-puppet-motd-affects)
     * [Setup requirements](#setup-requirements)
     * [Beginning with motd](#beginning-with-motd)
 1. [Usage - Configuration options and additional functionality](#usage)
@@ -18,11 +18,11 @@ Configures the Message of the day (motd) using puppet.
 
 ## Setup
 
-### What motd affects **OPTIONAL**
+### What puppet-motd affects **OPTIONAL**
 
 This motd module manages the file /etc/motd and also provides functionality to add custom snippets.
 
-### Beginning with motd
+### Beginning with puppet-motd
 
 To begin with motd module, all you need to do is include `motd` class.
 ```
