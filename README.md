@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/shaheed121/puppet-motd.svg?branch=master)](https://travis-ci.org/shaheed121/puppet-motd)
+
 # puppet-motd
 
 #### Table of Contents
