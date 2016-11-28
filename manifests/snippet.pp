@@ -24,16 +24,20 @@
 #    content => "Content comes here. You can use template too instead of the string.",
 # }
 #
+# Authors
+# -------
+#
+# Abdul Shaheed <shaheed121@gmail.com>
+#
 
 define motd::snippet (
   String[1]                 $content,
   Optional[Integer[11, 89]] $order   = 50,
 ) {
 
-  concat::fragment{ "/etc/motd/${order}/${name}":
+  concat::fragment { "/etc/motd/${order}/${name}":
     target  => '/etc/motd',
-    content => $content,
     order   => $order,
+    content => $content,
   }
 }
-

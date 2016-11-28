@@ -1,65 +1,38 @@
 # Class: motd
 # ===========================
 #
-# Full description of class motd here.
-#
-# Parameters
-# ----------
-#
-# Document parameters here.
-#
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
-#
-# Variables
-# ----------
-#
-# Here you should define a list of variables that this module would require.
-#
-# * `sample variable`
-#  Explanation of how this variable affects the function of this class and if
-#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#  External Node Classifier as a comma separated list of hostnames." (Note,
-#  global variables should be avoided in favor of class parameters as
-#  of Puppet 2.6.)
+# This module manages the Message of the day.
 #
 # Examples
 # --------
 #
 # @example
-#    class { 'motd':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#    }
+#   class { '::motd': }
 #
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
-#
-# Copyright
-# ---------
-#
-# Copyright 2016 Your name here, unless otherwise noted.
+# Abdul Shaheed <shaheed121@gmail.com>
 #
 class motd {
-  $motd = '/etc/motd'
 
-  concat { $motd:
-    owner => 'root',
-    group => 'root',
-    mode  => '0644',
+  concat { 'motd':
+    ensure => present,
+    path   => '/etc/motd',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
   }
 
-  concat::fragment{ 'motd_header':
-    target  => $motd,
-    content => epp('motd/motd_header.epp'),
+  concat::fragment { 'motd/motd_header':
+    target  => 'motd',
     order   => '10',
+    content => epp('motd/motd_header.epp'),
   }
 
-  concat::fragment{ 'motd_footer':
-    target  => $motd,
-    content => epp('motd/motd_footer.epp'),
+  concat::fragment { 'motd/motd_footer':
+    target  => 'motd',
     order   => '90',
+    content => epp('motd/motd_footer.epp'),
   }
 }

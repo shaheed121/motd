@@ -1,6 +1,6 @@
 {
-  "name": "motd",
-  "version": "0.1.0",
+  "name": "puppet-motd",
+  "version": "0.1.1",
   "author": "Abdul Shaheed",
   "summary": "Puppet module to manage Message of the day on linux systems.",
   "license": "Apache-2.0",
